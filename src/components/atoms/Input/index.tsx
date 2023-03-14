@@ -206,7 +206,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((props, ref) => {
             }}
             value={props.value}
             className={classNames(
-              "input input-password ",
+              "input input-password w-full",
               props.fontColor,
               props.className,
               mapModifiers("input border"),
