@@ -40,6 +40,11 @@ const useStyles = makeStyles()((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+    fontSize: "1.6rem",
+    transition: ".4s",
+    ":hover": {
+      transform: "scale(1.1)",
+    },
   },
 }));
 
