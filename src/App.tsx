@@ -1,9 +1,14 @@
 import React from "react";
 import "./index.css";
-import Login from "./pages/Login";
+import MainRoute from "./pages/MainRoute";
+import { ProSidebarProvider } from "react-pro-sidebar";
 
 function App() {
-  return <Login />;
+  return (
+    <ProSidebarProvider>
+      <MainRoute />
+    </ProSidebarProvider>
+  );
 }
 
 export default App;

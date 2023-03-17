@@ -1,6 +1,6 @@
-import { Box, ButtonBase } from "@mui/material";
+import { ButtonBase } from "@mui/material";
 import classNames from "classnames";
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import Search from "../../../assets/icon/Search";
 import { mapModifiers } from "../../../utils";
 import { numberWithCommas } from "../../../utils/currencyFormat";
@@ -120,7 +120,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((props, ref) => {
           <span className={classNames("absolute icon-after", props.fontColor)}>
             {props.iconAfter}
           </span>
-          {props.inputMode == "search" && (
+          {props.inputMode === "search" && (
             <ButtonBase sx={{ paddingInline: "0.5rem" }}>
               <Search width={15} height={15} color={"#827CFF"} />
             </ButtonBase>
