@@ -8,6 +8,8 @@ import {
 import MainWrapperContainer from "src/containers/MainWrapperContainer";
 import AuthProvider from "src/layouts/Auth/AuthProvider";
 import ProtectedRoute from "src/layouts/Auth/ProtectedRoute";
+import ComingSoon from "src/layouts/CommingSoon";
+import Home from "./Home";
 import Login from "./Login";
 
 type Props = {};
@@ -15,52 +17,65 @@ type Props = {};
 export const sideBar: RouteObject[] = [
   {
     path: "/home",
-    element: <p>Sản phẩm</p>,
+    element: <Home />,
   },
   {
     path: "/don-hang",
-    element: <p>Đơn hàng</p>,
+    element: <ComingSoon feature="Đơn hàng" />,
   },
   {
     path: "/khach-hang",
-    element: <p>Khách hàng</p>,
+    element: <ComingSoon feature="Khách hàng" />,
   },
   {
     path: "/thuong-hieu",
-    element: <p>Khách hàng</p>,
+    element: <ComingSoon feature="Thương hiệu" />,
   },
   {
     path: "/thong-ke",
     children: [
-      { path: "/thong-ke/doanh-thu", element: <p>Thống kê doanh thu</p> },
-      { path: "/thong-ke/san-pham", element: <p>Thống kê sản phẩm</p> },
-      { path: "/thong-ke/don-hang", element: <p>Thống kê đơn hàng</p> },
-      { path: "/thong-ke/best-seller", element: <p>Thống kê best seller</p> },
+      {
+        path: "/thong-ke/doanh-thu",
+        element: <ComingSoon feature="Doanh thu" />,
+      },
+      {
+        path: "/thong-ke/san-pham",
+        element: <ComingSoon feature="Sản phẩm" />,
+      },
+      {
+        path: "/thong-ke/don-hang",
+        element: <ComingSoon feature="Thống kê đơn hàng" />,
+      },
+      {
+        path: "/thong-ke/best-seller",
+        element: <ComingSoon feature="Best seller" />,
+      },
     ],
   },
   {
     path: "/thanh-toan",
-    element: <p>Thanh Toán</p>,
+    element: <ComingSoon feature="Thanh Toán" />,
   },
   {
     path: "/phan-quyen",
-    element: <p>Phân quyền</p>,
+    element: <ComingSoon feature="Phân quyền" />,
   },
   {
     path: "/support",
-    element: <p>Support</p>,
+    element: <ComingSoon feature="Support" />,
   },
   {
     path: "/quang-cao",
-    element: <p>Quảng Cáo</p>,
+    element: <ComingSoon feature="Quảng cáo" />,
   },
   {
     path: "/kho",
-    element: <p>Quản lý kho</p>,
+    element: <ComingSoon feature="Kho" />,
   },
 ];
 
 const router = createBrowserRouter([
+  { path: "/*", element: <p className="text-[6rem]">Page Not Found</p> },
   {
     element: (
       <ProtectedRoute>

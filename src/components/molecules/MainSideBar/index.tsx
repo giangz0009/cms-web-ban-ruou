@@ -118,7 +118,7 @@ const MainSideBar = (props: Props) => {
             height: "100%",
           }}
         >
-          <div className="flex flex-col px-6 relative my-6">
+          <div className="flex flex-col px-12 relative my-6">
             <NavLink
               to={"/"}
               className="flex flex-1 items-center overflow-hidden"
@@ -127,10 +127,9 @@ const MainSideBar = (props: Props) => {
               <Typography
                 variant="h5"
                 noWrap
-                component="a"
-                href=""
+                component="p"
                 sx={{
-                  mr: 2,
+                  ml: 2,
                   display: { xs: "flex" },
                   flexGrow: 1,
                   fontFamily: "monospace",
