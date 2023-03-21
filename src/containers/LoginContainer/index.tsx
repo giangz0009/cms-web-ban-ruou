@@ -31,6 +31,7 @@ const useStyles = makeStyles()((theme) => ({
     margin: theme.spacing(3, 0, 2),
     fontSize: "1.6rem",
     transition: ".4s",
+    backgroundColor: theme.palette.primary.light,
     ":hover": {
       transform: "scale(1.1)",
     },

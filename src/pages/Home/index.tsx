@@ -70,18 +70,34 @@ const Home = (props: Props) => {
         productName: {
           label: removedIdColRow.productName,
           title: "Tên sản phẩm",
+          responsive: {
+            xs: 12,
+            md: 6,
+          },
         },
         brand: {
           label: removedIdColRow.brand,
           title: "Thương hiệu",
+          responsive: {
+            xs: 12,
+            md: 6,
+          },
         },
         amount: {
           label: removedIdColRow.amount.toString(),
           title: "Số lượng",
+          responsive: {
+            xs: 12,
+            md: 6,
+          },
         },
         image: {
           label: "Hình ảnh",
           title: "Hình ảnh",
+          responsive: {
+            xs: 12,
+            md: 6,
+          },
         },
       };
 
@@ -100,6 +116,7 @@ const Home = (props: Props) => {
         data={data}
         title="Sản phẩm"
         onRowClicked={handleClickedRow}
+        onAdd={() => {}}
       />
       <ModalDataTableInfo
         title={modalTitle}
